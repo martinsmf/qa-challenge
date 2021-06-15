@@ -1,0 +1,30 @@
+{
+  "name": "qa-challenge",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "cypress:open": "./node_modules/.bin/cypress open",
+    "cypress:run": "./node_modules/bin/cypress run"
+  },
+  "cypress-cucumber-preprocessor": {
+    "step_definitions": "cypress/support/steps"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/martinsmf/qa-challenge.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/martinsmf/qa-challenge/issues"
+  },
+  "homepage": "https://github.com/martinsmf/qa-challenge#readme",
+  "devDependencies": {
+    "cypress": "^7.5.0"
+  },
+  "dependencies": {
+    "cypress-cucumber-preprocessor": "^4.1.2"
+  }
+}
