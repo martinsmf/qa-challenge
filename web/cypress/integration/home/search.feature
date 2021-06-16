@@ -4,16 +4,16 @@ Feature: Busca
               Desejo buscar cursos de forma mais ágil e específica
               Para facilitar a visualização de cursos do meu interesse
 
-        Scenario: Buscar curso
-            Given desejo adiquirir um curso
-             When ralizo a busca das aréas do meu interesse:
-                  | curso       |
-                  | "Policia"   |
-                  | "Bombeiros" |
-                  | "oab"       |
-                  | "QA"        |
+        Scenario Outline: Buscar curso
+            Given desejo adiquirir um curso na plataforma estratégia
+             When ralizo a busca dos "<curos>" na aréas do meu interesse:
              Then devo ver alista de cursos diponiveis
 
+        Examples:
+                  | curos   |
+                  | Policia |
+                  | prf     |
+                  | PREVIC  |
 
         Scenario Outline: Busca pelos filtros pré-estabelcidos
             Given que desejo utilizar um dos filtros preestabelecidos
