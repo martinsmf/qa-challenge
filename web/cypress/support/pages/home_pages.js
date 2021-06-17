@@ -1,13 +1,13 @@
 /// <reference types="Cypress" />
 
-import HomeElements from '../elements/home_elements'
+import HomeHeaderElements from '../elements/home_header_elements'
 import ResearchElements from '../elements/research_elements'
 
 class HomePage {
 
     search (text) {
-        HomeElements.inputSearch.type(text)
-        HomeElements.buttonSearch.click()
+        HomeHeaderElements.inputSearch.type(text)
+        HomeHeaderElements.buttonSearch.click()
         ResearchElements.buttonCourse.click()
     }
 }
