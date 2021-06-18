@@ -7,25 +7,25 @@ import ResearchElements from '../elements/research_elements'
 
 const url = Cypress.config('baseUrl')
 
-Given('desejo adiquirir um curso na plataforma estratégia', () => {
+Given('desejo adquirir um curso na plataforma estratégia', () => {
     cy.visit(url)
 });
 
-When('ralizo a busca dos {string} na aréas do meu interesse:', (cursos) => {
+When('realizo a busca dos {string} na aréas do meu interesse:', (cursos) => {
     HomePage.search(cursos)
 });
 
 
-Then('devo ver alista de cursos diponiveis', () => {
+Then('devo ver alista de cursos disponíveis', () => {
     expect(ResearchElements.courseList).to.length > 0
 });
 
 
-When(/^seleciono o um dos "([^"]*)" preestabelecidos$/, (busca) => {
+When('seleciono o um dos {string} preestabelecidos', (busca) => {
     HomeHeaderElements.searchLink(busca).click()
 });
 
-Then(/^devo ser direcionado para página referente a opção selecionada "([^"]*)"$/, (urlExample) => {
+Then('devo ser direcionado para página referente a opção selecionada {string}', (urlExample) => {
     cy.url().should('be.equal', `${url}/${urlExample}`)
 });
 
