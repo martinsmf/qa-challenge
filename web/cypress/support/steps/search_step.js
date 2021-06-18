@@ -11,12 +11,9 @@ Given('desejo adiquirir um curso na plataforma estratégia', () => {
     cy.visit(url)
 });
 
-
 When('ralizo a busca dos {string} na aréas do meu interesse:', (cursos) => {
-    HomeHeaderElements.modalChatoPraCaralho.click()
     HomePage.search(cursos)
 });
-
 
 
 Then('devo ver alista de cursos diponiveis', () => {
@@ -25,8 +22,6 @@ Then('devo ver alista de cursos diponiveis', () => {
 
 
 When(/^seleciono o um dos "([^"]*)" preestabelecidos$/, (busca) => {
-	console.log(busca);
-    HomeHeaderElements.modalChatoPraCaralho.click()
     HomeHeaderElements.searchLink(busca).click()
 });
 

@@ -17,13 +17,6 @@ class HomeHeaderElements {
     get headerTitle () {
         return cy.get('.page-header-title')
     }
-
-    get modalChatoPraCaralho () {
-        return cy.get('.getsitecontrol-container')
-    }
-
-
-
 }
 
 export default new HomeHeaderElements();
